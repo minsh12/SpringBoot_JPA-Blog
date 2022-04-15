@@ -27,7 +27,7 @@ public class User {
 
 
     /* 사용자로부터 username, password, email 값만 받으면 됨. 나머지는 자동 입력 */
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false, length = 30, unique = true)
     private String username; // 아이디
 
     @Column(nullable = false, length = 100) // 123456 => 해쉬 (비밀번호 암호화, 넉넉하게 크기 잡아두기)
